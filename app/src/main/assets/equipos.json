@@ -1,0 +1,290 @@
+[
+  {
+    "idEquipo": "mex",
+    "nombre": "México",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/mex.png",
+    "grupo": "A"
+  },
+  {
+    "idEquipo": "rsa",
+    "nombre": "Sudáfrica",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/rsa.png",
+    "grupo": "A"
+  },
+  {
+    "idEquipo": "kor",
+    "nombre": "Corea del Sur",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/kor.png",
+    "grupo": "A"
+  },
+  {
+    "idEquipo": "pdA",
+    "nombre": "Por determinar A",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "A"
+  },
+  {
+    "idEquipo": "can",
+    "nombre": "Canadá",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/can.png",
+    "grupo": "B"
+  },
+  {
+    "idEquipo": "pdB",
+    "nombre": "Por determinar B",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "B"
+  },
+  {
+    "idEquipo": "qat",
+    "nombre": "Qatar",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/qat.png",
+    "grupo": "B"
+  },
+  {
+    "idEquipo": "sui",
+    "nombre": "Suiza",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/sui.png",
+    "grupo": "B"
+  },
+  {
+    "idEquipo": "bra",
+    "nombre": "Brasil",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/bra.png",
+    "grupo": "C"
+  },
+  {
+    "idEquipo": "mar",
+    "nombre": "Marruecos",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/mar.png",
+    "grupo": "C"
+  },
+  {
+    "idEquipo": "hai",
+    "nombre": "Haití",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/hai.png",
+    "grupo": "C"
+  },
+  {
+    "idEquipo": "sco",
+    "nombre": "Escocia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/sco.png",
+    "grupo": "C"
+  },
+  {
+    "idEquipo": "usa",
+    "nombre": "Estados Unidos",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/usa.png",
+    "grupo": "D"
+  },
+  {
+    "idEquipo": "par",
+    "nombre": "Paraguay",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/par.png",
+    "grupo": "D"
+  },
+  {
+    "idEquipo": "aus",
+    "nombre": "Australia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/aus.png",
+    "grupo": "D"
+  },
+  {
+    "idEquipo": "pdD",
+    "nombre": "Por determinar D",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "D"
+  },
+  {
+    "idEquipo": "ger",
+    "nombre": "Alemania",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/ger.png",
+    "grupo": "E"
+  },
+  {
+    "idEquipo": "cura",
+    "nombre": "Curaçao",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/cura.png",
+    "grupo": "E"
+  },
+  {
+    "idEquipo": "civ",
+    "nombre": "Costa de Marfil",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/civ.png",
+    "grupo": "E"
+  },
+  {
+    "idEquipo": "ecu",
+    "nombre": "Ecuador",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/ecu.png",
+    "grupo": "E"
+  },
+  {
+    "idEquipo": "ned",
+    "nombre": "Países Bajos",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/ned.png",
+    "grupo": "F"
+  },
+  {
+    "idEquipo": "jpn",
+    "nombre": "Japón",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/jpn.png",
+    "grupo": "F"
+  },
+  {
+    "idEquipo": "pdF",
+    "nombre": "Por determinar F",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "F"
+  },
+  {
+    "idEquipo": "tun",
+    "nombre": "Túnez",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/tun.png",
+    "grupo": "F"
+  },
+  {
+    "idEquipo": "bel",
+    "nombre": "Bélgica",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/bel.png",
+    "grupo": "G"
+  },
+  {
+    "idEquipo": "egy",
+    "nombre": "Egipto",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/egy.png",
+    "grupo": "G"
+  },
+  {
+    "idEquipo": "irn",
+    "nombre": "Irán",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/irn.png",
+    "grupo": "G"
+  },
+  {
+    "idEquipo": "nzl",
+    "nombre": "Nueva Zelanda",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/nzl.png",
+    "grupo": "G"
+  },
+  {
+    "idEquipo": "esp",
+    "nombre": "España",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "H"
+  },
+  {
+    "idEquipo": "cpv",
+    "nombre": "Cabo Verde",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/cpv.png",
+    "grupo": "H"
+  },
+  {
+    "idEquipo": "ksa",
+    "nombre": "Arabia Saudita",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/ksa.png",
+    "grupo": "H"
+  },
+  {
+    "idEquipo": "uru",
+    "nombre": "Uruguay",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/uru.png",
+    "grupo": "H"
+  },
+  {
+    "idEquipo": "fra",
+    "nombre": "Francia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/fra.png",
+    "grupo": "I"
+  },
+  {
+    "idEquipo": "sen",
+    "nombre": "Senegal",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/sen.png",
+    "grupo": "I"
+  },
+  {
+    "idEquipo": "pdI",
+    "nombre": "Por determinar I",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "I"
+  },
+  {
+    "idEquipo": "nor",
+    "nombre": "Noruega",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/nor.png",
+    "grupo": "I"
+  },
+  {
+    "idEquipo": "arg",
+    "nombre": "Argentina",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/arg.png",
+    "grupo": "J"
+  },
+  {
+    "idEquipo": "alg",
+    "nombre": "Argelia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/alg.png",
+    "grupo": "J"
+  },
+  {
+    "idEquipo": "aut",
+    "nombre": "Austria",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/aut.png",
+    "grupo": "J"
+  },
+  {
+    "idEquipo": "jor",
+    "nombre": "Jordania",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/jor.png",
+    "grupo": "J"
+  },
+  {
+    "idEquipo": "por",
+    "nombre": "Portugal",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/por.png",
+    "grupo": "K"
+  },
+  {
+    "idEquipo": "pdK",
+    "nombre": "Por determinar K",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/esp.png",
+    "grupo": "K"
+  },
+  {
+    "idEquipo": "uzb",
+    "nombre": "Uzbekistán",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/uzb.png",
+    "grupo": "K"
+  },
+  {
+    "idEquipo": "col",
+    "nombre": "Colombia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/col.png",
+    "grupo": "K"
+  },
+  {
+    "idEquipo": "eng",
+    "nombre": "Inglaterra",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/eng.png",
+    "grupo": "L"
+  },
+  {
+    "idEquipo": "cro",
+    "nombre": "Croacia",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/cro.png",
+    "grupo": "L"
+  },
+  {
+    "idEquipo": "gha",
+    "nombre": "Ghana",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/gha.png",
+    "grupo": "L"
+  },
+  {
+    "idEquipo": "pan",
+    "nombre": "Panamá",
+    "banderaUrl": "https://raw.githubusercontent.com/ObidioTimoteo/world-score-data/main/assets/flags/pan.png",
+    "grupo": "L"
+  }
+]

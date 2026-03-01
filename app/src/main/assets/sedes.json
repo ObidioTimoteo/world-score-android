@@ -1,0 +1,82 @@
+[
+  {
+    "idSede": "tor",
+    "nombre": "Toronto",
+    "idPais": "can"
+  },
+  {
+    "idSede": "van",
+    "nombre": "Vancouver",
+    "idPais": "can"
+  },
+  {
+    "idSede": "mex",
+    "nombre": "Ciudad de México",
+    "idPais": "mex"
+  },
+  {
+    "idSede": "zap",
+    "nombre": "Zapopan",
+    "idPais": "mex"
+  },
+  {
+    "idSede": "gua",
+    "nombre": "Guadalupe",
+    "idPais": "mex"
+  },
+  {
+    "idSede": "atl",
+    "nombre": "Atlanta",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "fox",
+    "nombre": "Foxborough",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "arl",
+    "nombre": "Arlington",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "hou",
+    "nombre": "Houston",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "kc",
+    "nombre": "Kansas City",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "ing",
+    "nombre": "Inglewood",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "mia",
+    "nombre": "Miami",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "rut",
+    "nombre": "East Rutherford",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "phi",
+    "nombre": "Philadelphia",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "scl",
+    "nombre": "Santa Clara",
+    "idPais": "usa"
+  },
+  {
+    "idSede": "sea",
+    "nombre": "Seattle",
+    "idPais": "usa"
+  }
+]

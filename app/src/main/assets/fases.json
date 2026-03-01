@@ -1,0 +1,8 @@
+[
+  { "idFase": "grupo", "nombre": "Grupo" },
+  { "idFase": "r16", "nombre": "Dieciseisavos" },
+  { "idFase": "r8", "nombre": "Octavos" },
+  { "idFase": "r4", "nombre": "Cuartos" },
+  { "idFase": "sf", "nombre": "Semifinal" },
+  { "idFase": "final", "nombre": "Final" }
+]

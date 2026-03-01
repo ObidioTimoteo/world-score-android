@@ -1,0 +1,14 @@
+[
+  {
+    "idPais": "usa",
+    "nombre": "Estados Unidos"
+  },
+  {
+    "idPais": "mex",
+    "nombre": "México"
+  },
+  {
+    "idPais": "can",
+    "nombre": "Canadá"
+  }
+]
