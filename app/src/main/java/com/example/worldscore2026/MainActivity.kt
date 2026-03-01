@@ -10,6 +10,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.room.PrimaryKey
 import com.example.worldscore2026.data.local.database.WorldScoreApp
 import com.example.worldscore2026.data.local.entity.*
+import com.example.worldscore2026.data.mapper.toEntity
+import com.example.worldscore2026.data.remote.api.RetrofitInstance
 import com.example.worldscore2026.data.test.JsonLoader
 import kotlinx.coroutines.launch
 
@@ -18,6 +20,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val db = (application as WorldScoreApp).database
+
+        lifecycleScope.launch {
+
+            // Con Retrofit y Gson obtenemos una lista de PaisDto desde la API de GitHub
+            val paisesDto = RetrofitInstance.api.getPaises()
+
+            // Mediante el mapeo lo convertimos a una Entity
+            val paisEntities = paisesDto.map { it.toEntity() }
+
+            // Mediante room insertamos la lista de países en la BD
+            db.PaisDao().insertAll(paisEntities)
+
+            Log.d("API_TEST", "Insertados ${paisEntities.size} países desde GitHub")
+        }
+
+        /* Cuando cargamos datos desde archivos JSON locales para pruebas
 
         lifecycleScope.launch {
 
@@ -87,5 +105,7 @@ class MainActivity : AppCompatActivity() {
             db.PartidoDao().insertAll(partidosEntities)
             Log.d("DB_TEST", "Insertados ${partidosEntities.size} partidos")
         }
+
+        */
     }
 }
