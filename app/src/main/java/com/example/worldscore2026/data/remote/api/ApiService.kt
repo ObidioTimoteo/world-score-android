@@ -18,6 +18,6 @@ interface ApiService {
     suspend fun getEquipos(): List<EquipoDto>
 
     @GET("data/partidos/grupos/jornada1.json")
-    suspend fun getJornada1(): List<PartidoDto>
+    suspend fun getPartidosJornada1(): List<PartidoDto>
 
 }
