@@ -15,7 +15,4 @@ interface SedeDao {
 
     @Query("SELECT * FROM sede")
     fun getAllSedes(): Flow<List<SedeEntity>>
-
-    @Query("SELECT * FROM sede")
-    suspend fun getAll(): List<SedeEntity>
 }

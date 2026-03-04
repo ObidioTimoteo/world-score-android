@@ -16,6 +16,4 @@ interface PaisDao {
     @Query("SELECT * FROM pais")
     fun getAllPaises(): Flow<List<PaisEntity>>
 
-    @Query("SELECT * FROM pais")
-    suspend fun getAll(): List<PaisEntity>
 }

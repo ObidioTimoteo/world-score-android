@@ -16,9 +16,6 @@ interface FaseDao {
     @Query("SELECT * FROM fase")
     fun getAllFases(): Flow<List<FaseEntity>>
 
-    @Query("SELECT * FROM fase")
-    suspend fun getAll(): List<FaseEntity>
-
     @Query("SELECT * FROM fase WHERE idFase = :id")
     suspend fun getById(id: String): FaseEntity?
 }

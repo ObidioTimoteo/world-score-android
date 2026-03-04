@@ -10,13 +10,13 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface EquipoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(paises: List<EquipoEntity>)
+    suspend fun insertAll(equipos: List<EquipoEntity>)
 
     @Query("SELECT * FROM equipo")
     fun getAllEquipos(): Flow<List<EquipoEntity>>
 
     @Query("SELECT * FROM equipo WHERE grupo = :grupo")
-    suspend fun getEquipoPorGrupo(grupo: String): List<EquipoEntity>
+    fun getEquipoPorGrupo(grupo: String): Flow<List<EquipoEntity>>
 
     @Query("SELECT COUNT(*) FROM equipo")
     suspend fun countEquipos(): Int
