@@ -17,11 +17,14 @@ interface PartidoDao {
     fun getAllPartidos(): Flow<List<PartidoEntity>>
 
     @Query("SELECT * FROM partido WHERE idFase = :fase")
-    suspend fun getPartidosPorFase(fase: String): Flow<List<PartidoEntity>>
+    fun getPartidosPorFase(fase: String): Flow<List<PartidoEntity>>
 
     @Query("SELECT * FROM partido WHERE jornada = :jornada")
-    suspend fun getPartidosPorJornada(jornada: Int): Flow<List<PartidoEntity>>
+    fun getPartidosPorJornada(jornada: Int): Flow<List<PartidoEntity>>
 
     @Query("DELETE FROM partido")
     suspend fun deleteAll()
+
+    @Query("SELECT COUNT(*) FROM partido")
+    suspend fun countPartidos(): Int
 }

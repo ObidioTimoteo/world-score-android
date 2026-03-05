@@ -1,5 +1,7 @@
 package com.example.worldscore2026.data.repository
 
+import android.util.Log
+import androidx.room.withTransaction
 import com.example.worldscore2026.data.local.database.AppDatabase
 import com.example.worldscore2026.data.mapper.toEntity
 import com.example.worldscore2026.data.remote.api.ApiService
@@ -14,14 +16,14 @@ class WorldScoreRepository (
      * Países, sedes, fases y equipos NO cambiarán durante el torneo
      **/
     suspend fun cargarDatosIniciales() {
-        val equiposCount = db.EquipoDao().countEquipos()
-        if (equiposCount == 0) {
+        val partidosCount = db.PartidoDao().countPartidos()
+        if (partidosCount == 0) {
             cargarDatosEstaticosRemotos()
         }
     }
 
     suspend fun cargarDatosEstaticosRemotos() {
-        with(db) {
+        db.withTransaction {
             // Descarga datos estáticos desde GitHub y los persiste en Room
             val paises = api.getPaises().map { it.toEntity() }
             db.PaisDao().insertAll(paises)
@@ -43,11 +45,16 @@ class WorldScoreRepository (
      * Este métod_o se llamará al arrancar la app
      **/
     suspend fun refrescarPartidos() {
-        with(db) {
-            db.PartidoDao().deleteAll()
-            val partidos = api.getPartidosJornada1().map { it.toEntity() }
-            db.PartidoDao().insertAll(partidos)
+        try {
+            db.withTransaction {
+                db.PartidoDao().deleteAll()
+                val partidos = api.getPartidosJornada1().map { it.toEntity() }
+                db.PartidoDao().insertAll(partidos)
+            }
+        } catch (e: Exception) {
+            Log.e("DB", "Error insertando partidos", e)
         }
+
     }
 
     /**
