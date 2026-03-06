@@ -1,22 +1,15 @@
 package com.example.worldscore2026
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.worldscore2026.data.local.database.WorldScoreApp
 import com.example.worldscore2026.data.remote.api.RetrofitInstance
 import com.example.worldscore2026.data.repository.WorldScoreRepository
-import com.example.worldscore2026.ui.adapter.EquipoAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 

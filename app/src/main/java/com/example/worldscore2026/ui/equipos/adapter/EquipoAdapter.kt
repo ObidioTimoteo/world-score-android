@@ -1,4 +1,4 @@
-package com.example.worldscore2026.ui.adapter
+package com.example.worldscore2026.ui.equipos.adapter
 
 import android.view.LayoutInflater
 import android.view.View

@@ -11,7 +11,7 @@ class WorldScoreViewModel (
 
     // Datos expuestos de la UI
     val equipos = repository.getEquipos()
-    val partidos = repository.getPartidos()
+    val partidos = repository.getPartidosCompletosPorJornada(1)
     val sedes = repository.getSedes()
     val fases = repository.getFases()
 

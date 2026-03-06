@@ -10,9 +10,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worldscore2026.R
-import com.example.worldscore2026.data.local.database.WorldScoreApp
+import com.example.worldscore2026.WorldScoreApp
 import com.example.worldscore2026.data.remote.api.RetrofitInstance
 import com.example.worldscore2026.data.repository.WorldScoreRepository
+import com.example.worldscore2026.ui.partidos.adapter.PartidoAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModelFactory
 import kotlinx.coroutines.launch

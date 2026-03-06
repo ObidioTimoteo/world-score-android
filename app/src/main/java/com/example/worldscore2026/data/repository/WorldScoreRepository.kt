@@ -64,5 +64,7 @@ class WorldScoreRepository (
     fun getPartidos() = db.PartidoDao().getAllPartidos()
     fun getSedes() = db.SedeDao().getAllSedes()
     fun getFases() = db.FaseDao().getAllFases()
+    fun getPartidosCompletosPorJornada(jornada: Int) =
+        db.PartidoDao().getPartidosCompletosPorJornada(jornada)
 
 }
