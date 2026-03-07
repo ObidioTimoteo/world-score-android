@@ -48,8 +48,20 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         val partido = partidos[position]
 
         // Equipos
-        holder.equipoLocal.text = partido.equipoLocal.nombre
-        holder.equipoVisitante.text = partido.equipoVisitante.nombre
+        val nombreLocal =
+            if (partido.equipoLocal.idEquipo == "tbd")
+                partido.partido.placeholderLocal
+            else
+                partido.equipoLocal.nombre
+
+        val nombreVisitante =
+            if (partido.equipoVisitante.idEquipo == "tbd")
+                partido.partido.placeholderVisitante
+            else
+                partido.equipoVisitante.nombre
+
+        holder.equipoLocal.text = nombreLocal
+        holder.equipoVisitante.text = nombreVisitante
 
         // Marcador
         val golesLocal = partido.partido.golesLocal

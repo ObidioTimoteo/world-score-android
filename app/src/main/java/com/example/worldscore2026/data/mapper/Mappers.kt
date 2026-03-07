@@ -41,5 +41,7 @@ fun PartidoDto.toEntity() = PartidoEntity (
     jornada = jornada,
     fecha = fecha,
     hora = hora,
-    idSede = idSede
+    idSede = idSede,
+    placeholderLocal = placeholderLocal,
+    placeholderVisitante = placeholderVisitante
 )

@@ -51,5 +51,7 @@ data class PartidoEntity(
     val jornada: Int?,
     val fecha: String,
     val hora: String,
-    val idSede: String
+    val idSede: String,
+    val placeholderLocal: String?,
+    val placeholderVisitante: String?
 )
