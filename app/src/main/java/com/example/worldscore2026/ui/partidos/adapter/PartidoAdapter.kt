@@ -1,5 +1,6 @@
 package com.example.worldscore2026.ui.partidos.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
     private var partidos: List<PartidoCompleto> = emptyList()
 
     fun submitList(lista: List<PartidoCompleto>) {
+        Log.d("ADAPTER", "Lista recibida: ${lista.size}")
         partidos = lista
         notifyDataSetChanged()
     }
@@ -54,12 +56,11 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         val golesVisitante = partido.partido.golesVisitante
 
         holder.marcador.text =
-            if (golesLocal != null && golesVisitante != null) {
-                "${golesLocal} - ${golesVisitante}"
-            } else {
+            if (golesLocal == null && golesVisitante == null) {
                 " vs "
+            } else {
+                "${golesLocal} - ${golesVisitante}"
             }
-
 
         // Fecha y hora
         holder.fecha.text = partido.partido.fecha

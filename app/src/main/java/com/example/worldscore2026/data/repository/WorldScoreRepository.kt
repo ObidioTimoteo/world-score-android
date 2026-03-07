@@ -48,13 +48,12 @@ class WorldScoreRepository (
         try {
             db.withTransaction {
                 db.PartidoDao().deleteAll()
-                val partidos = api.getPartidosJornada1().map { it.toEntity() }
+                val partidos = api.getPartidos().map { it.toEntity() }
                 db.PartidoDao().insertAll(partidos)
             }
         } catch (e: Exception) {
             Log.e("DB", "Error insertando partidos", e)
         }
-
     }
 
     /**
@@ -66,5 +65,6 @@ class WorldScoreRepository (
     fun getFases() = db.FaseDao().getAllFases()
     fun getPartidosCompletosPorJornada(jornada: Int) =
         db.PartidoDao().getPartidosCompletosPorJornada(jornada)
-
+    fun getPartidosPorFase(fase: String) =
+        db.PartidoDao().getPartidosPorFase(fase)
 }

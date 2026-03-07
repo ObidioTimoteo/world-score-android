@@ -1,55 +1,31 @@
 package com.example.worldscore2026.ui.partidos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import com.example.worldscore2026.R
-import com.example.worldscore2026.WorldScoreApp
-import com.example.worldscore2026.data.remote.api.RetrofitInstance
-import com.example.worldscore2026.data.repository.WorldScoreRepository
-import com.example.worldscore2026.ui.partidos.adapter.PartidoAdapter
-import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
-import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModelFactory
-import kotlinx.coroutines.launch
+import com.example.worldscore2026.ui.partidos.adapter.JornadaPagerAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class PartidosFragment : Fragment() {
-
-    private lateinit var viewModel: WorldScoreViewModel
-    private lateinit var adapter: PartidoAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recycler = view.findViewById<RecyclerView>(R.id.recyclerPartidos)
+        val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
+        val tabLayout = view.findViewById<TabLayout>(R.id.tabLayout)
 
-        adapter = PartidoAdapter()
+        val adapter = JornadaPagerAdapter(this)
 
-        recycler.layoutManager = LinearLayoutManager(requireContext())
-        recycler.adapter = adapter
+        viewPager.adapter = adapter
 
-        val app = requireActivity().application as WorldScoreApp
-
-        val repository = WorldScoreRepository(
-            RetrofitInstance.api,
-            app.database
-        )
-
-        val factory = WorldScoreViewModelFactory(repository)
-
-        viewModel = ViewModelProvider(requireActivity(), factory)
-            .get(WorldScoreViewModel::class.java)
-
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.partidos.collect {
-                adapter.submitList(it)
-            }
-        }
+       TabLayoutMediator(tabLayout, viewPager) {tab, position ->
+           tab.text = adapter.getTitle(position)
+       }.attach()
     }
 
     override fun onCreateView(

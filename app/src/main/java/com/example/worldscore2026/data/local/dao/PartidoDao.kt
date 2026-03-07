@@ -17,9 +17,6 @@ interface PartidoDao {
     @Query("SELECT * FROM partido")
     fun getAllPartidos(): Flow<List<PartidoEntity>>
 
-    @Query("SELECT * FROM partido WHERE idFase = :fase")
-    fun getPartidosPorFase(fase: String): Flow<List<PartidoEntity>>
-
     @Query("SELECT * FROM partido WHERE jornada = :jornada")
     fun getPartidosPorJornada(jornada: Int): Flow<List<PartidoEntity>>
 
@@ -33,4 +30,9 @@ interface PartidoDao {
     @Transaction
     @Query("SELECT * FROM partido WHERE jornada = :jornada")
     fun getPartidosCompletosPorJornada(jornada: Int): Flow<List<PartidoCompleto>>
+
+    @Transaction
+    @Query("SELECT * FROM partido WHERE idFase = :fase")
+    fun getPartidosPorFase(fase: String): Flow<List<PartidoCompleto>>
+
 }

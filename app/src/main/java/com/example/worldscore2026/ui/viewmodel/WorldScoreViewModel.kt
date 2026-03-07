@@ -31,4 +31,12 @@ class WorldScoreViewModel (
             repository.refrescarPartidos()
         }
     }
+
+    // Partidos por jornada dinámica
+    fun getPartidosPorJornada(jornada: Int) =
+        repository.getPartidosCompletosPorJornada(jornada)
+
+    // Partidos por fase dinámica
+    fun getPartidosPorFase(fase: String) =
+        repository.getPartidosPorFase(fase)
 }

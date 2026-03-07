@@ -15,7 +15,7 @@ import com.example.worldscore2026.data.local.entity.*
         PartidoEntity::class,
         SedeEntity::class
     ],
-    version = 1
+    version = 2
 )
 
 abstract class AppDatabase : RoomDatabase() {
