@@ -37,7 +37,7 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_partido, parent, false)
+            .inflate(R.layout.item_partido_card, parent, false)
 
         return ViewHolder(view)
     }
@@ -75,8 +75,8 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
             }
 
         // Fecha y hora
-        holder.fecha.text = partido.partido.fecha
-        holder.hora.text = partido.partido.hora
+        holder.fecha.text = "📅  ${partido.partido.fecha}"
+        holder.hora.text = "🕒  ${partido.partido.hora}"
 
         // Banderas
         Glide.with(holder.itemView.context)

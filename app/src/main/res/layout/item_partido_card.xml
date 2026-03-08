@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PartidoCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Día -->
+        <TextView
+            android:id="@+id/txtFecha"
+            style="@style/DiaHoraText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Dom 21 Jun"
+            app:layout_constraintStart_toStartOf="@id/imgLocal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Hora -->
+        <TextView
+            android:id="@+id/txtHora"
+            style="@style/DiaHoraText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="18:00"
+            app:layout_constraintEnd_toEndOf="@id/imgVisitante"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Bandera local -->
+        <ImageView
+            android:id="@+id/imgLocal"
+            android:layout_width="36dp"
+            android:layout_height="24dp"
+            android:contentDescription="Bandera local"
+            app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtMarcador" />
+
+        <!-- Equipo local -->
+        <TextView
+            android:id="@+id/txtEquipoLocal"
+            style="@style/EquiposText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="España"
+            app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
+            app:layout_constraintEnd_toStartOf="@id/txtMarcador"
+            app:layout_constraintStart_toEndOf="@+id/imgLocal"
+
+            app:layout_constraintTop_toTopOf="@id/txtMarcador" />
+
+        <!-- Marcador -->
+        <TextView
+            android:id="@+id/txtMarcador"
+            style="@style/MarcadorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 - 0"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+
+        <!-- Equipo visitante -->
+        <TextView
+            android:id="@+id/txtEquipoVisitante"
+            style="@style/EquiposText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Francia"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
+            app:layout_constraintEnd_toStartOf="@+id/imgVisitante"
+            app:layout_constraintStart_toEndOf="@+id/txtMarcador"
+            app:layout_constraintTop_toTopOf="@id/txtMarcador" />
+
+        <!-- Bandera visitante (pegada a la derecha) -->
+        <ImageView
+            android:id="@+id/imgVisitante"
+            android:layout_width="36dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="6dp"
+            android:contentDescription="Bandera visitante"
+            app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtMarcador" />
+
+        <!-- Sede -->
+        <TextView
+            android:id="@+id/txtSede"
+            style="@style/SedeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Ontario (CAN)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarcador" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
