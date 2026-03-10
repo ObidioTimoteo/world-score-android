@@ -2,17 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/partidosFragment"
-        android:icon="@drawable/ic_partidos"
+        android:icon="@drawable/ic_soccer"
         android:title="Partidos"/>
 
     <item
-        android:id="@+id/gruposFragment"
-        android:icon="@drawable/ic_grupos"
-        android:title="Grupos"/>
+        android:id="@+id/clasificacionFragment"
+        android:icon="@drawable/ic_clasificacion"
+        android:title="Clasificación"/>
 
     <item
         android:id="@+id/equiposFragment"
-        android:icon="@drawable/ic_equipos"
+        android:icon="@drawable/ic_bandera"
         android:title="Equipos"/>
+
+    <item
+        android:id="@+id/ajustesFragment"
+        android:icon="@drawable/ic_opciones"
+        android:title="Ajustes"/>
 
 </menu>

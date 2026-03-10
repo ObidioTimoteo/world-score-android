@@ -33,6 +33,8 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         val imgVisitante: ImageView = view.findViewById(R.id.imgVisitante)
 
         val sede: TextView = view.findViewById(R.id.txtSede)
+
+        val grupo: TextView = view.findViewById(R.id.txtGrupo)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -89,5 +91,8 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
 
         // Sede
         holder.sede.text = "${partido.sede.nombre} (${partido.sede.idPais})"
+
+        // Grupo
+        holder.grupo.text = "Grupo ${partido.equipoLocal.grupo}"
     }
 }

@@ -23,6 +23,18 @@
             app:layout_constraintStart_toStartOf="@id/imgLocal"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Grupo -->
+        <TextView
+            android:id="@+id/txtGrupo"
+            style="@style/DiaHoraText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Grupo A"/>
+
         <!-- Hora -->
         <TextView
             android:id="@+id/txtHora"
@@ -64,8 +76,8 @@
             style="@style/MarcadorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0 - 0"
             android:layout_marginTop="8dp"
+            android:text="0 - 0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +90,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:text="Francia"
             android:gravity="end"
+            android:text="Francia"
             app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
             app:layout_constraintEnd_toStartOf="@+id/imgVisitante"
             app:layout_constraintStart_toEndOf="@+id/txtMarcador"

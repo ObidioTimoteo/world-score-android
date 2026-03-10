@@ -1,4 +1,4 @@
-package com.example.worldscore2026.ui.grupos
+package com.example.worldscore2026.ui.clasificacion
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [GruposFragment.newInstance] factory method to
+ * Use the [ClasificacionFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class GruposFragment : Fragment() {
+class ClasificacionFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -50,7 +50,7 @@ class GruposFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            GruposFragment().apply {
+            ClasificacionFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
