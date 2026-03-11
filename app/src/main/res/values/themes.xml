@@ -1,9 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.WorldScore2026" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.WorldScore2026.Default" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/wc_primary</item>
+        <item name="colorSecondary">@color/wc_secondary</item>
+        <item name="colorTertiary">@color/wc_accent</item>
+        <item name="colorOnSurfaceVariant">@color/wc_variante_texto</item>
     </style>
 
-    <style name="Theme.WorldScore2026" parent="Base.Theme.WorldScore2026" />
+    <style name="Theme.WorldScore2026.Canada" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/can_primary</item>
+        <item name="colorSecondary">@color/can_secondary</item>
+        <item name="colorOnSurfaceVariant">@color/can_variante_texto</item>
+    </style>
+
+    <style name="Theme.WorldScore2026.USA" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/usa_primary</item>
+        <item name="colorSecondary">@color/usa_secondary</item>
+        <item name="colorOnSurfaceVariant">@color/usa_variante_texto</item>
+    </style>
+
+    <style name="Theme.WorldScore2026.Mexico" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mex_primary</item>
+        <item name="colorSecondary">@color/mex_secondary</item>
+        <item name="colorOnSurfaceVariant">@color/mex_variante_texto</item>
+
+    </style>
+
 </resources>

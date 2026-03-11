@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#0A7F3F</color>   <!-- verde deporte -->
+
+    <!-- Colores por defecto -->
+    <color name="primary">#0A7F3F</color>
     <color name="primary_dark">#075C2E</color>
     <color name="accent">#0FB75A</color>
 
@@ -11,5 +13,26 @@
     <color name="white">#FFFFFF</color>
 
     <color name="black">#FF000000</color>
+
+    <!-- Colores Tema Mundial -->
+    <color name="wc_primary">#1F2A6B</color>
+    <color name="wc_secondary">#E63946</color>
+    <color name="wc_accent">#43A047</color>
+    <color name="wc_variante_texto">#666666</color>
+
+    <!-- Colores Canadá -->
+    <color name="can_primary">#D62828</color>
+    <color name="can_secondary">#9B1C1C</color>
+    <color name="can_variante_texto">#8B0000</color>
+
+    <!-- Colores USA -->
+    <color name="usa_primary">#1D3557</color>
+    <color name="usa_secondary">#457B9D</color>
+    <color name="usa_variante_texto">#2F4F6F</color>
+
+    <!-- Colores México -->
+    <color name="mex_primary">#2E7D32</color>
+    <color name="mex_secondary">#66BB6A</color>
+    <color name="mex_variante_texto">#2E7D32</color>
 
 </resources>

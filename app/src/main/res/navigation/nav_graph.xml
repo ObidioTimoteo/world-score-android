@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/clasificacionFragment"
-        android:name="com.example.worldscore2026.ui.equipos.EquiposFragment"
+        android:name="com.example.worldscore2026.ui.clasificacion.ClasificacionFragment"
         android:label="Grupos" />
 
     <fragment
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/ajustesFragment"
-        android:name="com.example.worldscore2026.ui.equipos.EquiposFragment"
+        android:name="com.example.worldscore2026.ui.ajustes.AjustesFragment"
         android:label="Partidos" />
 
 </navigation>
