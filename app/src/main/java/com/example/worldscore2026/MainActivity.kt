@@ -1,7 +1,9 @@
 package com.example.worldscore2026
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -16,6 +18,28 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: WorldScoreViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+        // Aplicar modo oscuro guardado
+        val darkMode = prefs.getBoolean("dark_mode", false)
+
+        if(darkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+
+        // Aplicar tema de color
+        val theme = prefs.getString("theme", "default")
+
+        when(theme) {
+            "canada" -> setTheme(R.style.Theme_WorldScore2026_Canada)
+            "usa" -> setTheme(R.style.Theme_WorldScore2026_USA)
+            "mexico" -> setTheme(R.style.Theme_WorldScore2026_Mexico)
+            else -> setTheme(R.style.Theme_WorldScore2026_Default)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

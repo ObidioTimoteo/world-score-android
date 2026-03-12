@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
             android:id="@+id/switchModoOscuro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="Modo oscuro"/>
 
         <TextView
@@ -38,26 +40,36 @@
             android:layout_marginTop="24dp"/>
 
         <RadioGroup
-            android:id="@+id/radioGrupoColores"
+            android:id="@+id/radioGrupoTema"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/radioRojo"
+                android:id="@+id/radioDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Tema Mundial 2026"/>
+
+            <RadioButton
+                android:id="@+id/radioCanada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:text="Rojo Canadá"/>
 
             <RadioButton
-                android:id="@+id/radioAzul"
+                android:id="@+id/radioUSA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:text="Azul USA"/>
 
             <RadioButton
-                android:id="@+id/radioVerde"
+                android:id="@+id/radioMexico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:text="Verde México"/>
 
         </RadioGroup>
@@ -79,6 +91,13 @@
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="WorldScore 2026\nProyecto DAM ILERNA\nCarlos Salvador Gutiérrez"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
