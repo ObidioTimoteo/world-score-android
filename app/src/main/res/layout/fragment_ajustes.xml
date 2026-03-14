@@ -84,6 +84,27 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"/>
 
+        <RadioGroup
+            android:id="@+id/radioIdioma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioEsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/language_esp"/>
+
+            <RadioButton
+                android:id="@+id/radioEng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/language_eng"/>
+
+        </RadioGroup>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,6 +115,7 @@
             android:layout_marginBottom="10dp"/>
 
         <TextView
+            android:id="@+id/txtInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

@@ -24,10 +24,78 @@
 
     <!-- LANGUAGE -->
     <string name="language_title">Language</string>
+    <string name="language_esp">Spanish</string>
+    <string name="language_eng">English</string>
 
     <!-- INFORMATION -->
     <string name="information_title">Information</string>
     <string name="information_text">WorldScore 2026\nProyecto DAM ILERNA\nCarlos Salvador Gutiérrez</string>
+
+    <!-- EQUIPOS -->
+    <string name="team_mex">Mexico</string>
+    <string name="team_rsa">South Africa</string>
+    <string name="team_kor">South Korea</string>
+    <string name="team_pdA">TBD A</string>
+
+    <string name="team_can">Canada</string>
+    <string name="team_pdB">TBD B</string>
+    <string name="team_qat">Qatar</string>
+    <string name="team_sui">Switzerland</string>
+
+    <string name="team_bra">Brazil</string>
+    <string name="team_mar">Morocco</string>
+    <string name="team_hai">Haiti</string>
+    <string name="team_sco">Scotland</string>
+
+    <string name="team_usa">United States</string>
+    <string name="team_par">Paraguay</string>
+    <string name="team_aus">Australia</string>
+    <string name="team_pdD">TBD D</string>
+
+    <string name="team_ger">Germany</string>
+    <string name="team_cura">Curaçao</string>
+    <string name="team_civ">Ivory Coast</string>
+    <string name="team_ecu">Ecuador</string>
+
+    <string name="team_ned">Netherlands</string>
+    <string name="team_jpn">Japan</string>
+    <string name="team_pdF">TBD F</string>
+    <string name="team_tun">Tunisia</string>
+
+    <string name="team_bel">Belgium</string>
+    <string name="team_egy">Egypt</string>
+    <string name="team_irn">Iran</string>
+    <string name="team_nzl">New Zealand</string>
+
+    <string name="team_esp">Spain</string>
+    <string name="team_cpv">Cape Verde</string>
+    <string name="team_ksa">Saudi Arabia</string>
+    <string name="team_uru">Uruguay</string>
+
+    <string name="team_fra">France</string>
+    <string name="team_sen">Senegal</string>
+    <string name="team_pdI">TBD I</string>
+    <string name="team_nor">Norway</string>
+
+    <string name="team_arg">Argentina</string>
+    <string name="team_alg">Algeria</string>
+    <string name="team_aut">Austria</string>
+    <string name="team_jor">Jordan</string>
+
+    <string name="team_por">Portugal</string>
+    <string name="team_pdK">TBD K</string>
+    <string name="team_uzb">Uzbekistan</string>
+    <string name="team_col">Colombia</string>
+
+    <string name="team_eng">England</string>
+    <string name="team_cro">Croatia</string>
+    <string name="team_gha">Ghana</string>
+    <string name="team_pan">Panama</string>
+
+    <string name="team_tbd">TBD</string>
+
+    <!-- GRUPO -->
+    <string name="group">Group</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

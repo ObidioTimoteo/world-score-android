@@ -22,6 +22,26 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         notifyDataSetChanged()
     }
 
+    /*
+     Función para convertir el id del equipo en el nombre del equipo en el idioma seleccionado.
+     Por ejemplo: "esp" -> "team_esp" -> R.string.team_esp -> "España / Spain"
+     */
+    private fun getTeamName(context: android.content.Context, teamId: String): String {
+        val resourceName = "team_$teamId"
+
+        val resId = context.resources.getIdentifier(
+            resourceName,
+            "string",
+            context.packageName
+        )
+
+        return if (resId != 0) {
+            context.getString(resId)
+        } else {
+            teamId
+        }
+    }
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val equipoLocal: TextView = view.findViewById(R.id.txtEquipoLocal)
         val equipoVisitante: TextView = view.findViewById(R.id.txtEquipoVisitante)
@@ -50,17 +70,19 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         val partido = partidos[position]
 
         // Equipos
+        val context = holder.itemView.context
+
         val nombreLocal =
             if (partido.equipoLocal.idEquipo == "tbd")
                 partido.partido.placeholderLocal
             else
-                partido.equipoLocal.nombre
+                getTeamName(context, partido.equipoLocal.idEquipo)
 
         val nombreVisitante =
             if (partido.equipoVisitante.idEquipo == "tbd")
                 partido.partido.placeholderVisitante
             else
-                partido.equipoVisitante.nombre
+                getTeamName(context, partido.equipoVisitante.idEquipo)
 
         holder.equipoLocal.text = nombreLocal
         holder.equipoVisitante.text = nombreVisitante
@@ -92,7 +114,8 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         // Sede
         holder.sede.text = "${partido.sede.nombre} (${partido.sede.idPais})"
 
-        // Grupo
-        holder.grupo.text = "Grupo ${partido.equipoLocal.grupo}"
+        // Grupo (Escribimos "Grupo" en su idioma)
+        holder.grupo.text = holder.itemView.context.getString(R.string.group) +
+                " ${partido.equipoLocal.grupo}"
     }
 }
