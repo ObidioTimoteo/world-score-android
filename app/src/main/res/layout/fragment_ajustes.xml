@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ajustes"
+            android:text="@string/settings_title"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"/>
@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apariencia"
+            android:text="@string/appearance_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"/>
@@ -31,13 +31,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Modo oscuro"/>
+            android:text="@string/dark_mode"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Color de la aplicación"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/color_title"/>
 
         <RadioGroup
             android:id="@+id/radioGrupoTema"
@@ -48,36 +49,36 @@
                 android:id="@+id/radioDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Tema Mundial 2026"/>
+                android:layout_marginStart="32dp"
+                android:text="@string/color_worldcup"/>
 
             <RadioButton
                 android:id="@+id/radioCanada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Rojo Canadá"/>
+                android:layout_marginStart="32dp"
+                android:text="@string/color_canada"/>
 
             <RadioButton
                 android:id="@+id/radioUSA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Azul USA"/>
+                android:layout_marginStart="32dp"
+                android:text="@string/color_usa"/>
 
             <RadioButton
                 android:id="@+id/radioMexico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Verde México"/>
+                android:layout_marginStart="32dp"
+                android:text="@string/color_mexico"/>
 
         </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="General"
+            android:text="@string/language_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
@@ -86,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Información"
+            android:text="@string/information_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
@@ -96,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="WorldScore 2026\nProyecto DAM ILERNA\nCarlos Salvador Gutiérrez"
+            android:text="@string/information_text"
             android:textSize="14sp" />
 
     </LinearLayout>

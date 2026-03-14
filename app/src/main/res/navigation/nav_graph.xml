@@ -12,16 +12,16 @@
     <fragment
         android:id="@+id/clasificacionFragment"
         android:name="com.example.worldscore2026.ui.clasificacion.ClasificacionFragment"
-        android:label="Grupos" />
+        android:label="Clasificacion" />
 
     <fragment
         android:id="@+id/equiposFragment"
         android:name="com.example.worldscore2026.ui.equipos.EquiposFragment"
-        android:label="Partidos" />
+        android:label="Equipos" />
 
     <fragment
         android:id="@+id/ajustesFragment"
         android:name="com.example.worldscore2026.ui.ajustes.AjustesFragment"
-        android:label="Partidos" />
+        android:label="Ajustes" />
 
 </navigation>

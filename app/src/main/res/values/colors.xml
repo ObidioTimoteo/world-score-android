@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Colores por defecto -->
+
+    <!-- Colores por defecto previos (los guardo de momento)
     <color name="primary">#0A7F3F</color>
     <color name="primary_dark">#075C2E</color>
     <color name="accent">#0FB75A</color>
-
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
-
     <color name="background">#F4F6F8</color>
     <color name="white">#FFFFFF</color>
-
     <color name="black">#FF000000</color>
+    -->
 
     <!-- Colores Tema Mundial -->
     <color name="wc_primary">#1F2A6B</color>
     <color name="wc_secondary">#E63946</color>
     <color name="wc_accent">#43A047</color>
-    <color name="wc_variante_texto">#666666</color>
+    <color name="wc_variante_texto">#E1C518</color>
 
     <!-- Colores Canadá -->
     <color name="can_primary">#D62828</color>

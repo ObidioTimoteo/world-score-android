@@ -1,5 +1,37 @@
 <resources>
+    <!-- APP -->
     <string name="app_name">WorldScore2026</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="nav_matches">Partidos</string>
+    <string name="nav_standings">Clasificación</string>
+    <string name="nav_teams">Equipos</string>
+    <string name="nav_settings">Opciones</string>
+
+    <!-- SETTINGS SCREEN -->
+    <string name="settings_title">Ajustes</string>
+
+    <!-- APPEARANCE -->
+    <string name="appearance_title">Apariencia</string>
+    <string name="dark_mode">Modo oscuro</string>
+
+    <!-- APP COLORS -->
+    <string name="color_title">Color de la aplicación</string>
+    <string name="color_worldcup">Tema Mundial 2026</string>
+    <string name="color_canada">Rojo Canadá</string>
+    <string name="color_usa">Azul USA</string>
+    <string name="color_mexico">Verde México</string>
+
+    <!-- LANGUAGE -->
+    <string name="language_title">Idioma</string>
+
+    <!-- INFORMATION -->
+    <string name="information_title">Información</string>
+    <string name="information_text">WorldScore 2026\nProyecto DAM ILERNA\nCarlos Salvador Gutiérrez</string>
+
+
+
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

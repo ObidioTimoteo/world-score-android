@@ -3,21 +3,21 @@
     <item
         android:id="@+id/partidosFragment"
         android:icon="@drawable/ic_soccer"
-        android:title="Partidos"/>
+        android:title="@string/nav_matches"/>
 
     <item
         android:id="@+id/clasificacionFragment"
         android:icon="@drawable/ic_clasificacion"
-        android:title="Clasificación"/>
+        android:title="@string/nav_standings"/>
 
     <item
         android:id="@+id/equiposFragment"
         android:icon="@drawable/ic_bandera"
-        android:title="Equipos"/>
+        android:title="@string/nav_teams"/>
 
     <item
         android:id="@+id/ajustesFragment"
         android:icon="@drawable/ic_opciones"
-        android:title="Ajustes"/>
+        android:title="@string/nav_settings"/>
 
 </menu>
