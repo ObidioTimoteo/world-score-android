@@ -2,7 +2,6 @@ package com.example.worldscore2026.ui.ajustes
 
 import android.content.Context
 import android.os.Bundle
-import android.os.LocaleList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import android.widget.RadioGroup
 import android.widget.Switch
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
 import androidx.fragment.app.Fragment
 import com.example.worldscore2026.R
 import com.example.worldscore2026.BuildConfig
@@ -122,7 +120,5 @@ class AjustesFragment : Fragment() {
             // Reiniciar Activity para aplicar el nuevo idioma
             requireActivity().recreate()
         }
-
-
     }
 }

@@ -35,4 +35,8 @@ interface PartidoDao {
     @Query("SELECT * FROM partido WHERE idFase = :fase")
     fun getPartidosPorFase(fase: String): Flow<List<PartidoCompleto>>
 
+    @Transaction
+    @Query("SELECT * FROM partido")
+    fun getAllPartidosCompletos(): Flow<List<PartidoCompleto>>
+
 }

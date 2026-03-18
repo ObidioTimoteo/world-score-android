@@ -2,7 +2,11 @@ package com.example.worldscore2026.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.worldscore2026.data.local.dao.PartidoDao
+import com.example.worldscore2026.data.local.relation.PartidoCompleto
+import com.example.worldscore2026.data.model.ClasificacionEquipo
 import com.example.worldscore2026.data.repository.WorldScoreRepository
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class WorldScoreViewModel (
@@ -39,4 +43,8 @@ class WorldScoreViewModel (
     // Partidos por fase dinámica
     fun getPartidosPorFase(fase: String) =
         repository.getPartidosPorFase(fase)
+
+    // Obtener Clasificación por grupo
+    fun getClasificacionGrupo(grupo: String) = repository.getClasificacionGrupo(grupo)
+
 }

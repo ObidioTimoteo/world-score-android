@@ -23,9 +23,9 @@ class PartidosFragment : Fragment() {
 
         viewPager.adapter = adapter
 
-       TabLayoutMediator(tabLayout, viewPager) {tab, position ->
-           tab.text = adapter.getTitle(position)
-       }.attach()
+        TabLayoutMediator(tabLayout, viewPager) {tab, position ->
+            tab.text = adapter.getTitle(position)
+        }.attach()
     }
 
     override fun onCreateView(

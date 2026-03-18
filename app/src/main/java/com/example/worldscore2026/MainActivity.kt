@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        // Leemos las preferencias guardadas
         val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
 
         // Aplicar modo oscuro guardado
