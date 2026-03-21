@@ -6,5 +6,7 @@ data class ClasificacionEquipo (
     val equipo: EquipoEntity,
     val pj: Int,
     val puntos: Int,
-    val diferencia: Int
+    val diferencia: Int,
+    val golesFavor: Int,
+    val isHeader: Boolean = false
 )

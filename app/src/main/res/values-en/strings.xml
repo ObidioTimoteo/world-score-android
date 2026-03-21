@@ -31,6 +31,15 @@
     <string name="information_title">Information</string>
     <string name="information_text">WorldScore 2026\nProyecto DAM ILERNA\nCarlos Salvador Gutiérrez</string>
 
+    <!-- GROUP MATCHES -->
+    <string name="group_matches">Group</string>
+
+    <!-- GROUP STANDINGS-->
+    <string name="group_standings">Group %1$s</string>
+    <string name="header_team">Team</string>
+    <string name="header_pj">MP</string>
+    <string name="header_ptos">Pts</string>
+
     <!-- EQUIPOS -->
     <string name="team_mex">Mexico</string>
     <string name="team_rsa">South Africa</string>
@@ -93,9 +102,6 @@
     <string name="team_pan">Panama</string>
 
     <string name="team_tbd">TBD</string>
-
-    <!-- GRUPO -->
-    <string name="group">Group</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

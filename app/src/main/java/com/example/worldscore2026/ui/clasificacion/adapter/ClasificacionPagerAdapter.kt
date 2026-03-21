@@ -2,9 +2,13 @@ package com.example.worldscore2026.ui.clasificacion.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.worldscore2026.R
 import com.example.worldscore2026.ui.clasificacion.ClasificacionGrupoFragment
 
 class ClasificacionPagerAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) {
+
+    private val context = fragment.requireContext()
+
     private val grupos = listOf(
         "A","B","C","D","E","F","G","H","I","J","K","L"
     )
@@ -16,6 +20,6 @@ class ClasificacionPagerAdapter (fragment: Fragment) : FragmentStateAdapter(frag
     }
 
     fun getTitle(position: Int): String {
-        return "Grupo ${grupos[position]}"
+        return context.getString(R.string.group_standings, grupos[position])
     }
 }

@@ -13,7 +13,7 @@
     <!-- Estilo del nombre de los equipos -->
     <style name="EquiposText">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textStyle">bold</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
@@ -29,14 +29,14 @@
     <!-- Estilo para el día y hora -->
     <style name="DiaHoraText">
         <item name="android:textSize">11sp</item>
-        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
     </style>
 
     <!-- Estilo para la sede -->
     <style name="SedeText">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
     </style>
 
 </resources>

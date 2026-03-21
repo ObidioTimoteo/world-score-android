@@ -1,68 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ClasificacionCard"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:padding="8dp">
-
-    <!-- Posición -->
-    <TextView
-    android:id="@+id/txtPos"
-    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="1"
-    android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"/>
+    style="@style/PartidoCard">
 
-    <!-- Bandera -->
-    <ImageView
-        android:id="@+id/imgBandera"
-        android:layout_width="24dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="6dp"
-        app:layout_constraintStart_toEndOf="@id/txtPos"
-        app:layout_constraintTop_toTopOf="@id/txtPos"
-        app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
-
-    <!-- Equipo -->
-    <TextView
-        android:id="@+id/txtEquipo"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="México"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/imgBandera"
-        app:layout_constraintEnd_toStartOf="@id/txtPJ"
-        app:layout_constraintTop_toTopOf="@id/txtPos"
-        app:layout_constraintBottom_toBottomOf="@id/txtPos"
-        />
+        android:minHeight="40dp"
+        android:padding="8dp">
 
-    <!-- Partidos jugados -->
-    <TextView
-        android:id="@+id/txtPJ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toStartOf="@id/txtPtosDg"
-        app:layout_constraintTop_toTopOf="@id/txtPos"
-        app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
+        <!-- Posición -->
+        <TextView
+            android:id="@+id/txtPos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:minWidth="10dp"
+            style="@style/EquiposText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <!-- Puntos +/- Diferencia goles -->
-    <TextView
-        android:id="@+id/txtPtosDg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="7 +3"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txtPos"
-        app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
+        <!-- Bandera -->
+        <ImageView
+            android:id="@+id/imgBandera"
+            android:layout_width="36dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/txtPos"
+            app:layout_constraintTop_toTopOf="@id/txtPos"
+            app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Equipo -->
+        <TextView
+            android:id="@+id/txtEquipo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="México"
+            style="@style/EquiposText"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/imgBandera"
+            app:layout_constraintEnd_toStartOf="@id/txtPJ"
+            app:layout_constraintTop_toTopOf="@id/txtPos"
+            app:layout_constraintBottom_toBottomOf="@id/txtPos"
+            />
+
+        <!-- Partidos jugados -->
+        <TextView
+            android:id="@+id/txtPJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:minWidth="40dp"
+            style="@style/EquiposText"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/txtPtosDg"
+            app:layout_constraintTop_toTopOf="@id/txtPos"
+            app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
+
+        <!-- Puntos +/- Diferencia goles -->
+        <TextView
+            android:id="@+id/txtPtosDg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 +3"
+            android:minWidth="60dp"
+            style="@style/EquiposText"
+            android:gravity="center"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtPos"
+            app:layout_constraintBottom_toBottomOf="@id/txtPos"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

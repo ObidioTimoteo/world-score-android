@@ -1,5 +1,7 @@
 package com.example.worldscore2026.ui.clasificacion.adapter
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +11,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
-import com.example.worldscore2026.data.local.relation.PartidoCompleto
 import com.example.worldscore2026.data.model.ClasificacionEquipo
+import com.example.worldscore2026.utils.getTeamName
 
 class ClasificacionAdapter : RecyclerView.Adapter<ClasificacionAdapter.ViewHolder>() {
 
@@ -41,28 +43,49 @@ class ClasificacionAdapter : RecyclerView.Adapter<ClasificacionAdapter.ViewHolde
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = equipos[position]
+        val context = holder.itemView.context
 
-        // Posicion
-        holder.txtPos.text = (position + 1).toString()
+        if (item.isHeader) {
+            // CABECERA de Clasificación
+            holder.txtPos.text = ""
+            holder.imgBandera.visibility = View.INVISIBLE
+            holder.txtEquipo.text = context.getString(R.string.header_team)
+            holder.txtPJ.text = context.getString(R.string.header_pj)
+            holder.txtPtsDg.text = context.getString(R.string.header_ptos)
 
-        // Nombre equipo
-        holder.txtEquipo.text = item.equipo.nombre
+            // Ponemos en negrita el texto de la cabecera
+            holder.txtEquipo.setTypeface(null, Typeface.BOLD)
+            holder.txtPJ.setTypeface(null, Typeface.BOLD)
+            holder.txtPtsDg.setTypeface(null, Typeface.BOLD)
 
-        // Partidos jugados
-        holder.txtPJ.text = item.pj.toString()
-
-        // Puntos + diferencia goles
-        val dg = if (item.diferencia >= 0) {
-            "+${item.diferencia}"
         } else {
-            "${item.diferencia}"
+            // Equipos de la Clasificación
+
+            // Reseteamos por si acaso las propiedades
+            holder.imgBandera.visibility = View.VISIBLE
+
+            // Posicion
+            holder.txtPos.text = position.toString()
+
+            // Nombre equipo
+            holder.txtEquipo.text = getTeamName(context, item.equipo.idEquipo)
+
+            // Partidos jugados
+            holder.txtPJ.text = item.pj.toString()
+
+            // Puntos + diferencia goles
+            val dg = if (item.diferencia >= 0) {
+                "+${item.diferencia}"
+            } else {
+                " ${item.diferencia}"
+            }
+
+            holder.txtPtsDg.text = "${item.puntos}$dg"
+
+            // Banderas
+            Glide.with(holder.itemView.context)
+                .load(item.equipo.banderaUrl)
+                .into(holder.imgBandera)
         }
-
-        holder.txtPtsDg.text = "${item.puntos}$dg"
-
-        // Banderas
-        Glide.with(holder.itemView.context)
-            .load(item.equipo.banderaUrl)
-            .into(holder.imgBandera)
     }
 }

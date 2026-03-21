@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
-import com.example.worldscore2026.data.local.entity.PartidoEntity
+import com.example.worldscore2026.utils.getTeamName
 import com.example.worldscore2026.data.local.relation.PartidoCompleto
 
 class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
@@ -20,26 +20,6 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         Log.d("ADAPTER", "Lista recibida: ${lista.size}")
         partidos = lista
         notifyDataSetChanged()
-    }
-
-    /*
-     Función para convertir el id del equipo en el nombre del equipo en el idioma seleccionado.
-     Por ejemplo: "esp" -> "team_esp" -> R.string.team_esp -> "España / Spain"
-     */
-    private fun getTeamName(context: android.content.Context, teamId: String): String {
-        val resourceName = "team_$teamId"
-
-        val resId = context.resources.getIdentifier(
-            resourceName,
-            "string",
-            context.packageName
-        )
-
-        return if (resId != 0) {
-            context.getString(resId)
-        } else {
-            teamId
-        }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -115,7 +95,7 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         holder.sede.text = "${partido.sede.nombre} (${partido.sede.idPais})"
 
         // Grupo (Escribimos "Grupo" en su idioma)
-        holder.grupo.text = holder.itemView.context.getString(R.string.group) +
+        holder.grupo.text = holder.itemView.context.getString(R.string.group_matches) +
                 " ${partido.equipoLocal.grupo}"
     }
 }

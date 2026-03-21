@@ -10,6 +10,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worldscore2026.R
+import com.example.worldscore2026.data.local.entity.EquipoEntity
+import com.example.worldscore2026.data.model.ClasificacionEquipo
 import com.example.worldscore2026.ui.clasificacion.adapter.ClasificacionAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import kotlinx.coroutines.launch
@@ -35,8 +37,21 @@ class ClasificacionGrupoFragment : Fragment() {
         val grupo = arguments?.getString("grupo") ?: "A"
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.getClasificacionGrupo(grupo).collect {
-                adapter.submitList(it)
+            viewModel.getClasificacionGrupo(grupo).collect { lista ->
+
+                // Creamos en la clasificación un item 0 para la cabecera
+                val header = ClasificacionEquipo(
+                    equipo = EquipoEntity(idEquipo = "", nombre = "", banderaUrl = "", grupo = ""),
+                    pj = 0,
+                    puntos = 0,
+                    diferencia = 0,
+                    golesFavor = 0,
+                    isHeader = true
+                )
+
+                val listaConHeader = listOf(header) + lista
+
+                adapter.submitList(listaConHeader)
             }
         }
     }

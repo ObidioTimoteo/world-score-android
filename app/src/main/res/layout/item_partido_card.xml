@@ -67,7 +67,6 @@
             app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
             app:layout_constraintEnd_toStartOf="@id/txtMarcador"
             app:layout_constraintStart_toEndOf="@+id/imgLocal"
-
             app:layout_constraintTop_toTopOf="@id/txtMarcador" />
 
         <!-- Marcador -->

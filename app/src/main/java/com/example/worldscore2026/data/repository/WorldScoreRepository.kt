@@ -94,8 +94,8 @@ class WorldScoreRepository (
          */
         for (p in partidos) {
 
-            val gl = p.partido.golesLocal ?: continue
-            val gv = p.partido.golesVisitante ?: continue
+            val gl = p.partido.golesLocal
+            val gv = p.partido.golesVisitante
 
             val local = tabla.getOrPut(p.equipoLocal.idEquipo) {
                 Estadisticas(p.equipoLocal)
@@ -105,18 +105,27 @@ class WorldScoreRepository (
                 Estadisticas(p.equipoVisitante)
             }
 
-            local.pj++
-            visitante.pj++
+            // Solo contamos los parámetros si el partido ya tiene resultado
+            if (gl != null && gv != null) {
+                local.pj++
+                visitante.pj++
 
-            local.dg += gl - gv
-            visitante.dg += gv - gl
+                local.dg += gl - gv
+                visitante.dg += gv - gl
 
-            when {
-                gl > gv -> local.puntos += 3
-                gl < gv -> visitante.puntos += 3
-                else -> {
-                    local.puntos += 1
-                    visitante.puntos += 1
+                /* Utilizamos goles a favor para ordenar la clasificación si los equipos
+                empatan en puntos y en diferencia de goles
+                 */
+                local.gf += gl
+                visitante.gf += gv
+
+                when {
+                    gl > gv -> local.puntos += 3
+                    gl < gv -> visitante.puntos += 3
+                    else -> {
+                        local.puntos += 1
+                        visitante.puntos += 1
+                    }
                 }
             }
         }
@@ -130,12 +139,14 @@ class WorldScoreRepository (
                 equipo = it.equipo,
                 pj = it.pj,
                 puntos = it.puntos,
-                diferencia = it.dg
+                diferencia = it.dg,
+                golesFavor = it.gf
             )
         }
         .sortedWith(
             compareByDescending<ClasificacionEquipo> { it.puntos }
                 .thenByDescending { it.diferencia }
+                .thenByDescending { it.golesFavor }
         )
     }
 
@@ -146,7 +157,8 @@ class WorldScoreRepository (
         val equipo: EquipoEntity,
         var pj: Int = 0,
         var puntos: Int = 0,
-        var dg: Int = 0
+        var dg: Int = 0,
+        var gf: Int = 0
     )
 
     /**
