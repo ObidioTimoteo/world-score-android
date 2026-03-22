@@ -162,6 +162,20 @@ class WorldScoreRepository (
     )
 
     /**
+     * Obtener partidos por equipo
+     */
+    fun getPartidosPorEquipo(idEquipo: String): Flow<List<PartidoCompleto>> {
+        return db.PartidoDao().getAllPartidosCompletos()
+            .map { partidos ->
+                partidos.filter {
+                    it.equipoLocal.idEquipo == idEquipo ||
+                            it.equipoVisitante.idEquipo == idEquipo
+                }
+            }
+    }
+
+
+    /**
      * Métodos de lectura
      **/
     fun getEquipos() = db.EquipoDao().getAllEquipos()

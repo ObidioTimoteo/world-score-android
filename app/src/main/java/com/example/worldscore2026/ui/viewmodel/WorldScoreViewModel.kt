@@ -47,4 +47,8 @@ class WorldScoreViewModel (
     // Obtener Clasificación por grupo
     fun getClasificacionGrupo(grupo: String) = repository.getClasificacionGrupo(grupo)
 
+    // Obtener Partidos por equipo
+    fun getPartidosPorEquipo(idEquipo: String) =
+        repository.getPartidosPorEquipo(idEquipo)
+
 }
