@@ -40,6 +40,8 @@
     <string name="header_pj">PJ</string>
     <string name="header_ptos">Ptos</string>
 
+    <!-- TEAMS -->
+    <string name="select_team">Selecciona equipo</string>
 
 
     <!-- EQUIPOS -->

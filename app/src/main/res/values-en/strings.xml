@@ -40,6 +40,9 @@
     <string name="header_pj">MP</string>
     <string name="header_ptos">Pts</string>
 
+    <!-- TEAMS -->
+    <string name="select_team">Select team</string>
+
     <!-- EQUIPOS -->
     <string name="team_mex">Mexico</string>
     <string name="team_rsa">South Africa</string>

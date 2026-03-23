@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
 import com.example.worldscore2026.data.local.entity.EquipoEntity
 import com.example.worldscore2026.ui.partidos.JornadaFragment
@@ -27,11 +30,18 @@ class EquiposFragment : Fragment() {
 
     private var listaEquipos: List<EquipoEntity> = emptyList()
 
+    // private lateinit var txtEquipo: TextView
+    private lateinit var imgBandera: ImageView
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val recycler = view.findViewById<RecyclerView>(R.id.recyclerPartidos)
         val spinner = view.findViewById<Spinner>(R.id.spinnerEquipos)
+
+        // Datos cabecera
+        // txtEquipo = view.findViewById(R.id.txtEquipo)
+        imgBandera = view.findViewById(R.id.imgBandera)
 
         // Reutilizamos el mismo adapter que en JornadaFragment
         adapter = PartidoAdapter()
@@ -69,10 +79,12 @@ class EquiposFragment : Fragment() {
                 )
 
                 spinner.adapter = spinnerAdapter
+
+
             }
         }
 
-        // Seleccionar equipo -> filtrar partidos
+        // Seleccionar equipo -> filtrar partidos y actualizamos cabecera
         spinner.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
 
@@ -82,13 +94,28 @@ class EquiposFragment : Fragment() {
                     position: Int,
                     id: Long
                 ) {
+                    // Si no hay equipos, sal y no hagas nada (por seguridad)
+                    if (listaEquipos.isEmpty()) return
+
                     val equipo = listaEquipos[position]
 
+                    actualizarCabecera(equipo)
                     observarPartidosEquipo(equipo.idEquipo)
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
             }
+    }
+
+    // Función para actualizar los datos de la cabecera
+    private fun actualizarCabecera(equipo: EquipoEntity) {
+        // Nombre del equipo
+        // txtEquipo.text = getTeamName(requireContext(), equipo.idEquipo)
+
+        // Bandera
+        Glide.with(requireContext())
+            .load(equipo.banderaUrl)
+            .into(imgBandera)
     }
 
     private fun observarPartidosEquipo(idEquipo: String) {
