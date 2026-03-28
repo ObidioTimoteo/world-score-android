@@ -10,42 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <!-- Día -->
-        <TextView
-            android:id="@+id/txtFecha"
-            style="@style/DiaHoraText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:text="Dom 21 Jun"
-            app:layout_constraintEnd_toStartOf="@+id/txtGrupo"
-            app:layout_constraintStart_toStartOf="@id/imgLocal"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <!-- Grupo -->
-        <TextView
-            android:id="@+id/txtGrupo"
-            style="@style/DiaHoraText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Grupo A"/>
-
-        <!-- Hora -->
-        <TextView
-            android:id="@+id/txtHora"
-            style="@style/DiaHoraText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:text="18:00"
-            app:layout_constraintEnd_toEndOf="@id/imgVisitante"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:padding="12dp"
+        android:minHeight="64dp">
 
         <!-- Bandera local -->
         <ImageView
@@ -76,12 +42,12 @@
             style="@style/MarcadorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="0 - 0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <!-- Equipo visitante -->
         <TextView
@@ -89,7 +55,7 @@
             style="@style/EquiposText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="6dp"
             android:gravity="end"
             android:text="Francia"
             app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
@@ -107,19 +73,6 @@
             app:layout_constraintBottom_toBottomOf="@id/txtMarcador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/txtMarcador" />
-
-        <!-- Sede -->
-        <TextView
-            android:id="@+id/txtSede"
-            style="@style/SedeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="Ontario (CAN)"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMarcador" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

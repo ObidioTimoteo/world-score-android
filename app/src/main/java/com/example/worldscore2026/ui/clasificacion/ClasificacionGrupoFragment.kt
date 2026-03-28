@@ -13,29 +13,41 @@ import com.example.worldscore2026.R
 import com.example.worldscore2026.data.local.entity.EquipoEntity
 import com.example.worldscore2026.data.model.ClasificacionEquipo
 import com.example.worldscore2026.ui.clasificacion.adapter.ClasificacionAdapter
+import com.example.worldscore2026.ui.clasificacion.adapter.PartidoSimpleAdapter
+import com.example.worldscore2026.ui.partidos.adapter.PartidoAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import kotlinx.coroutines.launch
 
 class ClasificacionGrupoFragment : Fragment() {
 
     private lateinit var viewModel: WorldScoreViewModel
-    private lateinit var adapter: ClasificacionAdapter
-
+    private lateinit var adapterClasificacion: ClasificacionAdapter
+    private lateinit var adapterPartidos: PartidoSimpleAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recycler = view.findViewById<RecyclerView>(R.id.recyclerClasificacion)
+        val recyclerClasificacion = view.findViewById<RecyclerView>(R.id.recyclerClasificacion)
+        val recyclerPartidos = view.findViewById<RecyclerView>(R.id.recyclerPartidosGrupo)
 
-        adapter = ClasificacionAdapter()
+        // Adapter para la Clasificación
+        adapterClasificacion = ClasificacionAdapter()
 
-        recycler.layoutManager = LinearLayoutManager(requireContext())
-        recycler.adapter = adapter
+        recyclerClasificacion.layoutManager = LinearLayoutManager(requireContext())
+        recyclerClasificacion.adapter = adapterClasificacion
 
+        // Adapter para los Partidos
+        adapterPartidos = PartidoSimpleAdapter()
+
+        recyclerPartidos.layoutManager = LinearLayoutManager(requireContext())
+        recyclerPartidos.adapter = adapterPartidos
+
+        // ViewModel
         viewModel = ViewModelProvider(requireActivity())
             .get(WorldScoreViewModel::class.java)
 
         val grupo = arguments?.getString("grupo") ?: "A"
 
+        // Clasificación
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.getClasificacionGrupo(grupo).collect { lista ->
 
@@ -49,9 +61,17 @@ class ClasificacionGrupoFragment : Fragment() {
                     isHeader = true
                 )
 
+                // Añadimos a la lista la cabecera
                 val listaConHeader = listOf(header) + lista
 
-                adapter.submitList(listaConHeader)
+                adapterClasificacion.submitList(listaConHeader)
+            }
+        }
+
+        // Partidos del Grupo
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.getPartidosPorGrupo(grupo).collect { lista ->
+                adapterPartidos.submitList(lista)
             }
         }
     }

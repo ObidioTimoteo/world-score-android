@@ -174,6 +174,18 @@ class WorldScoreRepository (
             }
     }
 
+    /**
+     * Obtener partidos por grupo
+     */
+    fun getPartidosPorGrupo(grupo: String): Flow<List<PartidoCompleto>> {
+        return db.PartidoDao().getAllPartidosCompletos()
+            .map { partidos ->
+                partidos.filter {
+                    it.equipoLocal.grupo == grupo
+                }
+            }
+    }
+
 
     /**
      * Métodos de lectura
