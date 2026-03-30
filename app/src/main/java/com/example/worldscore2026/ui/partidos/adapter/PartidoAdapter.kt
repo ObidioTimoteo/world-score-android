@@ -94,8 +94,15 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         // Sede
         holder.sede.text = "${partido.sede.nombre} (${partido.sede.idPais})"
 
-        // Grupo (Escribimos "Grupo" en su idioma)
-        holder.grupo.text = holder.itemView.context.getString(R.string.group_matches) +
-                " ${partido.equipoLocal.grupo}"
+        /* Grupo (Escribimos "Grupo" en su idioma)
+        Si la fase no es "grupo" no pintaremos el Grupo en la tarjeta
+        */
+        if (partido.partido.idFase == "grupo") {
+            holder.grupo.text = holder.itemView.context.getString(R.string.group_matches) +
+                    " ${partido.equipoLocal.grupo}"
+            holder.grupo.visibility = View.VISIBLE
+        } else {
+            holder.grupo.visibility = View.GONE
+        }
     }
 }

@@ -103,6 +103,7 @@ class AjustesFragment : Fragment() {
         when(language) {
             "es" -> radioGrupoIdioma.check(R.id.radioEsp)
             "en" -> radioGrupoIdioma.check(R.id.radioEng)
+            "fr" -> radioGrupoIdioma.check(R.id.radioFr)
         }
 
         // Listener para cambiar idioma
@@ -113,6 +114,7 @@ class AjustesFragment : Fragment() {
             when(checkedId) {
                 R.id.radioEsp -> editor.putString("language", "es")
                 R.id.radioEng -> editor.putString("language", "en")
+                R.id.radioFr -> editor.putString("language", "fr")
             }
 
             editor.apply()

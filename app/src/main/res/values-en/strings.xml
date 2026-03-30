@@ -4,7 +4,7 @@
 
     <!-- BOTTOM NAVIGATION -->
     <string name="nav_matches">Matches</string>
-    <string name="nav_standings">Standings</string>
+    <string name="nav_standings">Groups</string>
     <string name="nav_teams">Teams</string>
     <string name="nav_settings">Settings</string>
 
@@ -26,6 +26,7 @@
     <string name="language_title">Language</string>
     <string name="language_esp">Spanish</string>
     <string name="language_eng">English</string>
+    <string name="language_fr">French</string>
 
     <!-- INFORMATION -->
     <string name="information_title">Information</string>
@@ -106,6 +107,4 @@
 
     <string name="team_tbd">TBD</string>
 
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

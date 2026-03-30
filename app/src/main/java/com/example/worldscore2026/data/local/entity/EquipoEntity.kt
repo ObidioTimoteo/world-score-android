@@ -8,5 +8,5 @@ data class EquipoEntity(
     @PrimaryKey val idEquipo: String,
     val nombre: String,
     val banderaUrl: String,
-    val grupo: String
+    val grupo: String?
 )

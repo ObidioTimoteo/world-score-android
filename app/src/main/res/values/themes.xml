@@ -22,7 +22,6 @@
         <item name="colorPrimary">@color/mex_primary</item>
         <item name="colorSecondary">@color/mex_secondary</item>
         <item name="colorOnSurfaceVariant">@color/mex_OnSurfaceVariant</item>
-
     </style>
 
 </resources>

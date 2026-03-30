@@ -54,6 +54,13 @@
                 android:text="@string/color_worldcup"/>
 
             <RadioButton
+                android:id="@+id/radioMexico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/color_mexico"/>
+
+            <RadioButton
                 android:id="@+id/radioCanada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,13 +73,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@string/color_usa"/>
-
-            <RadioButton
-                android:id="@+id/radioMexico"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="@string/color_mexico"/>
 
         </RadioGroup>
 
@@ -103,6 +103,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@string/language_eng"/>
+
+            <RadioButton
+                android:id="@+id/radioFr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/language_fr"/>
 
         </RadioGroup>
 

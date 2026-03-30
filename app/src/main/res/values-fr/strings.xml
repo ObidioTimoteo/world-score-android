@@ -1,0 +1,110 @@
+<resources>
+    <!-- APP -->
+    <string name="app_name">WorldScore2026</string>
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="nav_matches">Matchs</string>
+    <string name="nav_standings">Groupes</string>
+    <string name="nav_teams">Équipes</string>
+    <string name="nav_settings">Paramètres</string>
+
+    <!-- SETTINGS SCREEN -->
+    <string name="settings_title">Paramètres</string>
+
+    <!-- APPEARANCE -->
+    <string name="appearance_title">Apparence</string>
+    <string name="dark_mode">Mode sombre</string>
+
+    <!-- APP COLORS -->
+    <string name="color_title">Couleur de l’application</string>
+    <string name="color_worldcup">Thème Coupe du Monde 2026</string>
+    <string name="color_canada">Rouge Canada</string>
+    <string name="color_usa">Bleu États-Unis</string>
+    <string name="color_mexico">Vert Mexique</string>
+
+    <!-- LANGUAGE -->
+    <string name="language_title">Langue</string>
+    <string name="language_esp">Espagnol</string>
+    <string name="language_eng">Anglais</string>
+    <string name="language_fr">Français</string>
+
+    <!-- INFORMATION -->
+    <string name="information_title">Informations</string>
+    <string name="information_text">WorldScore 2026\nProjet DAM ILERNA\nCarlos Salvador Gutiérrez</string>
+
+    <!-- GROUP MATCHES -->
+    <string name="group_matches">Groupe</string>
+
+    <!-- GROUP STANDINGS-->
+    <string name="group_standings">Groupe %1$s</string>
+    <string name="header_team">Équipe</string>
+    <string name="header_pj">MJ</string>
+    <string name="header_ptos">Pts</string>
+
+    <!-- TEAMS -->
+    <string name="select_team">Sélectionner une équipe</string>
+
+    <!-- EQUIPOS -->
+    <string name="team_mex">Mexique</string>
+    <string name="team_rsa">Afrique du Sud</string>
+    <string name="team_kor">Corée du Sud</string>
+    <string name="team_pdA">TBD A</string>
+
+    <string name="team_can">Canada</string>
+    <string name="team_pdB">TBD B</string>
+    <string name="team_qat">Qatar</string>
+    <string name="team_sui">Suisse</string>
+
+    <string name="team_bra">Brésil</string>
+    <string name="team_mar">Maroc</string>
+    <string name="team_hai">Haïti</string>
+    <string name="team_sco">Écosse</string>
+
+    <string name="team_usa">États-Unis</string>
+    <string name="team_par">Paraguay</string>
+    <string name="team_aus">Australie</string>
+    <string name="team_pdD">TBD D</string>
+
+    <string name="team_ger">Allemagne</string>
+    <string name="team_cura">Curaçao</string>
+    <string name="team_civ">Côte d’Ivoire</string>
+    <string name="team_ecu">Équateur</string>
+
+    <string name="team_ned">Pays-Bas</string>
+    <string name="team_jpn">Japon</string>
+    <string name="team_pdF">TBD F</string>
+    <string name="team_tun">Tunisie</string>
+
+    <string name="team_bel">Belgique</string>
+    <string name="team_egy">Égypte</string>
+    <string name="team_irn">Iran</string>
+    <string name="team_nzl">Nouvelle-Zélande</string>
+
+    <string name="team_esp">Espagne</string>
+    <string name="team_cpv">Cap-Vert</string>
+    <string name="team_ksa">Arabie saoudite</string>
+    <string name="team_uru">Uruguay</string>
+
+    <string name="team_fra">France</string>
+    <string name="team_sen">Sénégal</string>
+    <string name="team_pdI">TBD I</string>
+    <string name="team_nor">Norvège</string>
+
+    <string name="team_arg">Argentine</string>
+    <string name="team_alg">Algérie</string>
+    <string name="team_aut">Autriche</string>
+    <string name="team_jor">Jordanie</string>
+
+    <string name="team_por">Portugal</string>
+    <string name="team_pdK">TBD K</string>
+    <string name="team_uzb">Ouzbékistan</string>
+    <string name="team_col">Colombie</string>
+
+    <string name="team_eng">Angleterre</string>
+    <string name="team_cro">Croatie</string>
+    <string name="team_gha">Ghana</string>
+    <string name="team_pan">Panama</string>
+
+    <string name="team_tbd">TBD</string>
+
+</resources>

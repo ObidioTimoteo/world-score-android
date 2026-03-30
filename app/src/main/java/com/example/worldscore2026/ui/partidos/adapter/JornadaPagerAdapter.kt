@@ -13,6 +13,7 @@ class JornadaPagerAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) 
         "1/8",
         "1/4",
         "SF",
+        "3P",
         "F"
     )
 
@@ -27,7 +28,8 @@ class JornadaPagerAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) 
             4 -> JornadaFragment.newInstanceFase("r8")
             5 -> JornadaFragment.newInstanceFase("r4")
             6 -> JornadaFragment.newInstanceFase("sf")
-            7 -> JornadaFragment.newInstanceFase("final")
+            7 -> JornadaFragment.newInstanceFase("tq")
+            8 -> JornadaFragment.newInstanceFase("final")
 
             else -> JornadaFragment.newInstanceJornada(1)
         }
