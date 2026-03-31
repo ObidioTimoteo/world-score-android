@@ -61,18 +61,18 @@
                 android:text="@string/color_mexico"/>
 
             <RadioButton
-                android:id="@+id/radioCanada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="@string/color_canada"/>
-
-            <RadioButton
                 android:id="@+id/radioUSA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@string/color_usa"/>
+
+            <RadioButton
+                android:id="@+id/radioCanada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/color_canada"/>
 
         </RadioGroup>
 

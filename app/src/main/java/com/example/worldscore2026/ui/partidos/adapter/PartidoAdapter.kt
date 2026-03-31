@@ -94,15 +94,27 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         // Sede
         holder.sede.text = "${partido.sede.nombre} (${partido.sede.idPais})"
 
-        /* Grupo (Escribimos "Grupo" en su idioma)
-        Si la fase no es "grupo" no pintaremos el Grupo en la tarjeta
+        /* Grupo
+        - Escribimos "Grupo" en su idioma y el grupo que sea
+        - Si el partido no es de la fase "grupo" escribimos la eliminatoria (1/16, 1/8, etc.)
         */
-        if (partido.partido.idFase == "grupo") {
+        val fase = partido.partido.idFase
+
+        if (fase == "grupo") {
             holder.grupo.text = holder.itemView.context.getString(R.string.group_matches) +
                     " ${partido.equipoLocal.grupo}"
-            holder.grupo.visibility = View.VISIBLE
         } else {
-            holder.grupo.visibility = View.GONE
+            holder.grupo.text = when (fase) {
+                "r16" -> "1/16"
+                "r8" -> "1/8"
+                "r4" -> "1/4"
+                "sf" -> "SF"
+                "tq" -> "3P"
+                "final" -> "F"
+                else -> ""
+            }
         }
+
+        holder.grupo.visibility = View.VISIBLE
     }
 }

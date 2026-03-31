@@ -68,11 +68,8 @@ class WorldScoreRepository (
      * 3.- Calculamos la clasificación de ese grupo
      */
     fun getClasificacionGrupo(grupo: String): Flow<List<ClasificacionEquipo>> {
-        return db.PartidoDao().getAllPartidosCompletos()
-            .map { partidos: List<PartidoCompleto> ->
-                val partidosGrupo = partidos.filter {
-                    it.equipoLocal.grupo == grupo
-                }
+        return getPartidosPorGrupo(grupo)
+            .map { partidosGrupo ->
                 calcularClasificacion(partidosGrupo)
             }
     }
@@ -176,12 +173,15 @@ class WorldScoreRepository (
 
     /**
      * Obtener partidos por grupo
+     * (solo queremos coger los partidos de idFase = "grupo",
+     * no de las eliminatorias)
      */
     fun getPartidosPorGrupo(grupo: String): Flow<List<PartidoCompleto>> {
         return db.PartidoDao().getAllPartidosCompletos()
             .map { partidos ->
                 partidos.filter {
-                    it.equipoLocal.grupo == grupo
+                    it.equipoLocal.grupo == grupo &&
+                            it.partido.idFase == "grupo"
                 }
             }
     }
