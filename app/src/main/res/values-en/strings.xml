@@ -48,10 +48,10 @@
     <string name="team_mex">Mexico</string>
     <string name="team_rsa">South Africa</string>
     <string name="team_kor">South Korea</string>
-    <string name="team_pdA">TBD A</string>
+    <string name="team_cze">Czech Rep.</string>
 
     <string name="team_can">Canada</string>
-    <string name="team_pdB">TBD B</string>
+    <string name="team_bih">Bosnia</string>
     <string name="team_qat">Qatar</string>
     <string name="team_sui">Switzerland</string>
 
@@ -63,7 +63,7 @@
     <string name="team_usa">United States</string>
     <string name="team_par">Paraguay</string>
     <string name="team_aus">Australia</string>
-    <string name="team_pdD">TBD D</string>
+    <string name="team_tur">Turkey</string>
 
     <string name="team_ger">Germany</string>
     <string name="team_cura">Curaçao</string>
@@ -72,7 +72,7 @@
 
     <string name="team_ned">Netherlands</string>
     <string name="team_jpn">Japan</string>
-    <string name="team_pdF">TBD F</string>
+    <string name="team_swe">Sweden</string>
     <string name="team_tun">Tunisia</string>
 
     <string name="team_bel">Belgium</string>
@@ -87,7 +87,7 @@
 
     <string name="team_fra">France</string>
     <string name="team_sen">Senegal</string>
-    <string name="team_pdI">TBD I</string>
+    <string name="team_irq">Iraq</string>
     <string name="team_nor">Norway</string>
 
     <string name="team_arg">Argentina</string>
@@ -96,7 +96,7 @@
     <string name="team_jor">Jordan</string>
 
     <string name="team_por">Portugal</string>
-    <string name="team_pdK">TBD K</string>
+    <string name="team_cod">DR Congo</string>
     <string name="team_uzb">Uzbekistan</string>
     <string name="team_col">Colombia</string>
 
