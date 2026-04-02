@@ -6,6 +6,8 @@ data class PartidoDto (
     val idEquipoVisitante: String,
     val golesLocal: Int?,
     val golesVisitante: Int?,
+    val penaltisLocal: Int? = null,
+    val penaltisVisitante: Int? = null,
     val idFase: String,
     val jornada: Int?,
     val fecha: String,

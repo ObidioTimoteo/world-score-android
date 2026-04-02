@@ -26,6 +26,13 @@
         <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
+    <!-- Estilo del texto de los penaltis -->
+    <style name="PenaltisText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
     <!-- Estilo para el día y hora -->
     <style name="DiaHoraText">
         <item name="android:textSize">11sp</item>

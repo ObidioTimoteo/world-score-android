@@ -110,6 +110,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/txtMarcador" />
 
+        <!-- Penaltis -->
+        <TextView
+            android:id="@+id/txtPenaltis"
+            style="@style/PenaltisText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="PEN 4-5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarcador" />
+
         <!-- Sede -->
         <TextView
             android:id="@+id/txtSede"
@@ -121,7 +135,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMarcador" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPenaltis" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

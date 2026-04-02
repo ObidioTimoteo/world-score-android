@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
 import com.example.worldscore2026.utils.getTeamName
 import com.example.worldscore2026.data.local.relation.PartidoCompleto
+import org.w3c.dom.Text
 
 class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
 
@@ -33,8 +34,9 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
         val imgVisitante: ImageView = view.findViewById(R.id.imgVisitante)
 
         val sede: TextView = view.findViewById(R.id.txtSede)
-
         val grupo: TextView = view.findViewById(R.id.txtGrupo)
+
+        val penaltis: TextView = view.findViewById(R.id.txtPenaltis)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -77,6 +79,17 @@ class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
             } else {
                 "${golesLocal} - ${golesVisitante}"
             }
+
+        // Penaltis
+        val penLocal = partido.partido.penaltisLocal
+        val penVisitante = partido.partido.penaltisVisitante
+
+        if (penLocal != null && penVisitante != null) {
+            holder.penaltis.text = "PEN $penLocal-$penVisitante"
+            holder.penaltis.visibility = View.VISIBLE
+        } else {
+            holder.penaltis.visibility = View.GONE
+        }
 
         // Fecha y hora
         holder.fecha.text = "📅  ${partido.partido.fecha}"
