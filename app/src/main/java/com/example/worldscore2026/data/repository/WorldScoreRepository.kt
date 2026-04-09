@@ -87,7 +87,7 @@ class WorldScoreRepository (
 
         /* Para cada partido calculamos las estadísticas del equipo local y visitante
         y las sumamos a las que tenemos guardadas en su tabla
-        (para el primer partido crearemos la tabla con getOrPut
+        (para el primer partido crearemos la tabla con getOrPut)
          */
         for (p in partidos) {
 
@@ -185,7 +185,6 @@ class WorldScoreRepository (
                 }
             }
     }
-
 
     /**
      * Métodos de lectura

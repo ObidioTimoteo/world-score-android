@@ -77,7 +77,7 @@ class ClasificacionAdapter : RecyclerView.Adapter<ClasificacionAdapter.ViewHolde
             val dg = if (item.diferencia >= 0) {
                 "+${item.diferencia}"
             } else {
-                " ${item.diferencia}"
+                "${item.diferencia}"
             }
 
             holder.txtPtsDg.text = "${item.puntos}$dg"
