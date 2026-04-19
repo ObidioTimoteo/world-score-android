@@ -9,7 +9,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
 import com.example.worldscore2026.data.local.entity.EquipoEntity
-import com.example.worldscore2026.ui.partidos.JornadaFragment
 import com.example.worldscore2026.ui.partidos.adapter.PartidoAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import com.example.worldscore2026.utils.getTeamName

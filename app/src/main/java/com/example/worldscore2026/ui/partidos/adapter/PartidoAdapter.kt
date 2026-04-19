@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.example.worldscore2026.R
 import com.example.worldscore2026.utils.getTeamName
 import com.example.worldscore2026.data.local.relation.PartidoCompleto
-import org.w3c.dom.Text
 
 class PartidoAdapter : RecyclerView.Adapter<PartidoAdapter.ViewHolder>() {
 

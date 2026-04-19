@@ -14,7 +14,6 @@ import com.example.worldscore2026.data.local.entity.EquipoEntity
 import com.example.worldscore2026.data.model.ClasificacionEquipo
 import com.example.worldscore2026.ui.clasificacion.adapter.ClasificacionAdapter
 import com.example.worldscore2026.ui.clasificacion.adapter.PartidoSimpleAdapter
-import com.example.worldscore2026.ui.partidos.adapter.PartidoAdapter
 import com.example.worldscore2026.ui.viewmodel.WorldScoreViewModel
 import kotlinx.coroutines.launch
 

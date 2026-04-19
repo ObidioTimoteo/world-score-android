@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.worldscore2026.R
 import com.example.worldscore2026.ui.clasificacion.adapter.ClasificacionPagerAdapter
-import com.example.worldscore2026.ui.partidos.adapter.JornadaPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

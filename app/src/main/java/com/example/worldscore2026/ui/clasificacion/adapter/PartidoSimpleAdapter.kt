@@ -1,6 +1,5 @@
 package com.example.worldscore2026.ui.clasificacion.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
