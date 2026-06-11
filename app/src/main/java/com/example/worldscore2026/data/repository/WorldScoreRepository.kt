@@ -62,6 +62,18 @@ class WorldScoreRepository (
     }
 
     /**
+     * Refresco de fecha actual
+     **/
+    suspend fun refrescarFechaActual() {
+        try {
+            val fecha = api.getFechaActual().toEntity()
+            db.FechaActualDao().insert(fecha)
+        } catch (e: Exception) {
+            // Si falla seguimos usando la fecha almacenada
+        }
+    }
+
+    /**
      * Clasificación por grupo:
      * 1.- Cogemos todos los partidos
      * 2.- Nos quedamos con los partidos en el que el equipo local está en el grupo indicado
@@ -197,4 +209,8 @@ class WorldScoreRepository (
         db.PartidoDao().getPartidosCompletosPorJornada(jornada)
     fun getPartidosPorFase(fase: String) =
         db.PartidoDao().getPartidosPorFase(fase)
+    fun getPartidosPorFecha(fecha: String) =
+        db.PartidoDao().getPartidosPorFecha(fecha)
+    fun getFechaActual() =
+        db.FechaActualDao().getFechaActual()
 }

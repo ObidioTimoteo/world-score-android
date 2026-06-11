@@ -5,6 +5,11 @@
     app:startDestination="@id/partidosFragment">
 
     <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.worldscore2026.ui.calendario.CalendarioFragment"
+        android:label="Calendario" />
+
+    <fragment
         android:id="@+id/partidosFragment"
         android:name="com.example.worldscore2026.ui.partidos.PartidosFragment"
         android:label="Partidos" />

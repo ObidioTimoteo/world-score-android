@@ -22,6 +22,9 @@ class WorldScoreViewModel (
 
             // Refrescar resultados (cada vez que arranca la app)
             repository.refrescarPartidos()
+
+            // Refrescar fecha actual (cada vez que arranca la app)
+            repository.refrescarFechaActual()
         }
     }
 
@@ -51,5 +54,13 @@ class WorldScoreViewModel (
     // Obtener Partidos por grupo
     fun getPartidosPorGrupo(grupo: String) =
         repository.getPartidosPorGrupo(grupo)
+
+    // Obtener Partidos por fecha
+    fun getPartidosPorFecha(fecha: String) =
+        repository.getPartidosPorFecha(fecha)
+
+    // Obtener fecha actual
+    fun getFechaActual() =
+        repository.getFechaActual()
 
 }

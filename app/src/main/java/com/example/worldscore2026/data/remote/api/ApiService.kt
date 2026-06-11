@@ -20,4 +20,7 @@ interface ApiService {
     @GET("data/partidos.json")
     suspend fun getPartidos(): List<PartidoDto>
 
+    @GET("data/fechaActual.json")
+    suspend fun getFechaActual(): FechaActualDto
+
 }

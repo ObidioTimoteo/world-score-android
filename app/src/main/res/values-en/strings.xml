@@ -3,7 +3,8 @@
     <string name="app_name">WorldScore 2026</string>
 
     <!-- BOTTOM NAVIGATION -->
-    <string name="nav_matches">Matches</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_matches">Stages</string>
     <string name="nav_standings">Groups</string>
     <string name="nav_teams">Teams</string>
     <string name="nav_settings">Settings</string>

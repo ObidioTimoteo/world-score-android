@@ -47,3 +47,10 @@ fun PartidoDto.toEntity() = PartidoEntity (
     placeholderLocal = placeholderLocal,
     placeholderVisitante = placeholderVisitante
 )
+
+/* FECHA ACTUAL */
+fun FechaActualDto.toEntity() =
+    FechaActualEntity(
+        id = 1,
+        fechaActual = fechaActual
+    )

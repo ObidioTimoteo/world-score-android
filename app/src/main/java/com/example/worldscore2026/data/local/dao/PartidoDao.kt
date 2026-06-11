@@ -39,4 +39,13 @@ interface PartidoDao {
     @Query("SELECT * FROM partido")
     fun getAllPartidosCompletos(): Flow<List<PartidoCompleto>>
 
+    @Transaction
+    @Query("""
+        SELECT *
+        FROM partido
+        WHERE fecha = :fecha
+        ORDER BY hora
+    """)
+    fun getPartidosPorFecha(fecha: String): Flow<List<PartidoCompleto>>
+
 }

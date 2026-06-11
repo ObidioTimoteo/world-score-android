@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.worldscore2026.data.local.dao.*
 import com.example.worldscore2026.data.local.entity.*
+import com.example.worldscore2026.data.remote.dto.FechaActualDto
 
 @Database(
     entities = [
@@ -13,7 +14,8 @@ import com.example.worldscore2026.data.local.entity.*
         FaseEntity::class,
         PaisEntity::class,
         PartidoEntity::class,
-        SedeEntity::class
+        SedeEntity::class,
+        FechaActualEntity::class
     ],
     version = 2
 )
@@ -24,6 +26,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun PaisDao(): PaisDao
     abstract fun PartidoDao(): PartidoDao
     abstract fun SedeDao(): SedeDao
+    abstract fun FechaActualDao(): FechaActualDao
 
     companion object {
         @Volatile
